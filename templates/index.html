@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Recognition Attendance System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Face Recognition Attendance System</h1>
+    <form action="/submit" method="post">
+        <label for="id">Enter ID:</label>
+        <input type="text" id="id" name="id"><br><br>
+        <label for="name">Enter Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div>
+        {% if output %}
+            <h2>Output:</h2>
+            <p>{{ output }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
